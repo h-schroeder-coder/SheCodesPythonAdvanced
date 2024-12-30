@@ -1,0 +1,7 @@
+with open('week_2/tasks.txt', 'r') as file: 
+    tasks = file.readlines()
+
+for tasks in tasks:
+    print(f"I need to {tasks.strip()}")
+    
+file.close()

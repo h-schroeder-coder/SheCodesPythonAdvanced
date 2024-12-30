@@ -1,0 +1,4 @@
+empty dishwaher
+reload diswasher
+fold laundry
+put away laundry
