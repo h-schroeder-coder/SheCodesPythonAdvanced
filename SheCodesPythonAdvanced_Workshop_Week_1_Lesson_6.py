@@ -1,4 +1,4 @@
-from user import User
+from user1 import User
 
 nancy = User("Nancy", 1998)
 print(nancy.welcome())
