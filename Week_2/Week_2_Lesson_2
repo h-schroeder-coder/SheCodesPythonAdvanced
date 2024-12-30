@@ -1,7 +1,9 @@
-with open('week_2/tasks.txt', 'r') as file: 
-    tasks = file.readlines()
+with open('week_2/tasks.txt', 'r') as tasks_file: 
+    tasks_items = tasks_file.readlines()
 
-for tasks in tasks:
+print("My todo list:")
+
+for tasks in tasks_items:
     print(f"I need to {tasks.strip()}")
     
-file.close()
+tasks_file.close()
