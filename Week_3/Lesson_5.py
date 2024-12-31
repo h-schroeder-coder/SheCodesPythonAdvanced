@@ -8,5 +8,6 @@ plt.pie(days, labels=condition)
 plt.ylabel('Conditions')
 
 plt.title('Frequency (days) of Weather Conditions')
+plt.legend(days)
 
 plt.show()
