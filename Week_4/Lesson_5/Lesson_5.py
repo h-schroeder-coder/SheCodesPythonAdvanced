@@ -1,11 +1,13 @@
 import csv
 
-with open('customers.csv', 'r') as file:
-  cs = csv.reader(file)
 
-  for c in cs:
-    id = c[0]
-    f = c[2]
-    l = c[3]
-    e = c[9]
-    print(f"Customer #{id}, {f} {l}, {e}")
+with open('week_4/lesson_5/customer.csv', 'r') as file:
+  customers = csv.reader(file)
+
+  for customer in customers:
+    customer_number = customer[0]
+    first_name = customer[2]
+    last_name = customer[3]
+    email = customer[9]
+    print(f"Customer #{customer_number}, {first_name} {last_name}, {email}")  
+
