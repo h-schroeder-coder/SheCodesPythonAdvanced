@@ -1,7 +1,7 @@
 import csv
 
 with open('Week_4/Lesson_2/Lesson_2_Weather.csv', 'r') as csvfile: 
-    csv_reader = csv.reader(csvfile)
+    reader = csv.DictReader(csvfile)
     
-    for city in csv_reader:
-        print(f"It is currently {city[2]}ºC in {city[0]}, {city[1]}")
+    for line in reader:
+        print(f"It is currently {line['temperature']}ºC in {line['city']}, {line['country']}")
