@@ -12,8 +12,8 @@ with open(filename, 'r') as csvfile:
   reader = csv.DictReader(csvfile)
   for line in reader:
     continent = line['continent']
-    year = line['year']
-    population = line['population']
+    year = int(line['year'])
+    population = int(line['population'])
     
     if continent not in population_per_continent:
       population_per_continent[continent] = {'population': [], 'years': []}
@@ -22,13 +22,18 @@ with open(filename, 'r') as csvfile:
     population_per_continent[continent]['years'].append(year)
     
 
-
+for continent in population_per_continent:
+  years = population_per_continent[continent]['years']
+  population = population_per_continent[continent]['population']
+  plt.plot(years, population, label=continent, marker='*')
+  
   
     
-plt.plot([1990, 2000, 2010, 2020], [0, 25000000, 30000000, 35000000], label="Population", marker='*', color='m')
-plt.plot([10, 20, 30], [15000000, 30000000, 40000000], label ="Animal", marker='o', color='c')
+
 plt.xlabel("Year")
-plt.ylabel("Population")
-plt.title("Populations Across Continents & Time")
+plt.ylabel("Population (in billion users)")
+plt.title("Internet Populations Across Continents & Time")
 plt.grid(True)
+plt.legend()
+plt.tight_layout()
 plt.show()
