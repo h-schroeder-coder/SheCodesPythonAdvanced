@@ -40,5 +40,8 @@ forecast['Friday'] = { "temperature": 27, "condition": "Cloudy"}
 print(forecast['Friday'])
 
 # Print Friday temperature such as "Friday's temperature will be 27 degrees and cloudy
-print(f"Friday's temperature will be {forecast['Friday']['temperature']} degrees and {forecast['Friday']["condition"]}")
+day = "Friday"
+temperature = forecast['Friday']['temperature']
+condition = forecast['Friday']["condition"].lower()
+print(f"{day}'s temperature will be {temperature} degrees and {condition}")
       
