@@ -1,23 +1,18 @@
 def calculate_total_population(populations):
   """calculates the total population given a list of countries and populations"""
   
-  total_population = 0
+  total = 0
   for location in populations: 
-    population = int(location['population'])
-    total_population = total_population + population
+    total = total + int(location['population'])
     
-    return total_population
+  return total
     
-def calculate_rounded_total_population(total_population):
-  """returns rounded total population in millions, rounded to one decimal point"""
-  total_population_in_millions = total_population / 1000000
-  rounded_total_population_in_millions = round(total_population_in_millions, 1)
+def display_calculated_rounded_total_population(total):
+  """displays the rounded total population in millions, rounded"""
+  total_in_millions = round(total / 1000000)
   
-  return rounded_total_population_in_millions
+  print(f"The total population is {total_in_millions} million people")
 
-
-def display_rounded_total_population(rounded_total_population_in_millions):
-  print(f"The total population is {rounded_total_population_in_millions} million people")
 
 #initial data set
 populations = [
@@ -31,12 +26,5 @@ populations = [
 # Display the total population such as, the total population is 203 million people
 
 total_population = calculate_total_population(populations)
-rounded_total_population_in_millions = calculate_rounded_total_population(total_population)
-display_rounded_total_population(rounded_total_population_in_millions)
-
-
-
-
-
-
+display_calculated_rounded_total_population(total_population)
 

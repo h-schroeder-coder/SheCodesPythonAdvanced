@@ -1,6 +1,3 @@
-
-
-
 def calculate_total_population(populations_list):
   """
   Calculate total population based on a list of countries
