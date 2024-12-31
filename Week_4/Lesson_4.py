@@ -10,12 +10,15 @@ temperatures = [
 ]
 
 average_temperature = 0
+north_american_cities = 0
+total_temperature = 0
 
-for city in temperatures:
-    if continent = "North America" in temperatures:
-        temperature = float(temperatures[2]['temperature]'])
-        print(temperature)
-        #number_of_north_american_cities = len(temperatures)
-        #print(number_of_north_american_cities)
-        #average_temperature =         
+for temperature in temperatures:
+   
+    if temperature['continent'] == "North America":
+        total_temperature = total_temperature + float(temperature['temperature'])
+        north_american_cities = north_american_cities + 1        
+        
+average_temperature = total_temperature / north_american_cities
 
+print(f"Average temperature in North America is {round(average_temperature, 2)} degrees")
